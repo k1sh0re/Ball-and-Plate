@@ -3,7 +3,7 @@
 
 ## Objective
 
-To balance a ball at the center of a plate using a PID controller
+To balance a ball at the center of a plate using PID control.
 
 ## PID Controller
 PID control stands for proportional integral derivative control and is one the most popular control method used in robotics as it is relatively simple and can achieve control over almost any sort of disturbance created in a system.
@@ -21,15 +21,17 @@ The overall equation for a pid controller is given by:
 u(t) = $K_pe(t) + K_i \int_{0}^{t} e(t) dt\ + K_d \dfrac{de(t)}{dt}$
 
 ## Workflow
-### 1.Cruise Control
-In order to familiarize ourselves with the working of a PID controller, we developed a Cruise Control for a car which needs to move at a fixed set-point velocity.
+### 1. Cruise Control
+In order to familiarize ourselves with the working of a PID controller, we first developed a Cruise Control for a car which needs to move at a fixed set-point velocity.
 The system was implemented using python and the following results were obtained.
 
 ![cruise](https://user-images.githubusercontent.com/109210914/196035804-36c04ede-36d8-4b54-bc71-bb0aad3f6c71.png)
 
 The rise time for this system is 1.09 seconds with a maximum overshoot of 1.35%
 
-### 2.Ball and Beam
+# 
+
+### 2. Ball and Beam
 Next we built a Ball and Beam system in which the ball needs to be balanced in one dimension. An ultrasonic sensor was used to get the position of the ball and a sigle servo was used to control the inclination of the beam.
 The system was first implemented as code using Python and the following results were obtained.
 
@@ -37,13 +39,15 @@ The system was first implemented as code using Python and the following results 
 
 The rise time for this system is 1.71 seconds with a maximum overshoot of 3.57%
  
-The system was then implemented using an Arduino and we managed to balance the ball at the center of the beam.
+The system was then implemented using an Arduino and we were able to get the desired results.
 
 ![ball_and_beam](https://user-images.githubusercontent.com/109210914/196095834-43c094b6-9f8e-4d77-b6de-a9d98c597ba4.gif)
-### 3.Ball and Plate
 
-Our next step was to finally build the ball and plate system.
-The system was first implemented as code using Python and the following results were obtained.
+#
+
+### 3. Ball and Plate
+
+In our next step we implemented ball and plate system as code using Python and the following results were obtained.
 
 ![bap1](https://user-images.githubusercontent.com/109210914/196409465-f74777ee-7f4e-4404-b855-240165e4a5ff.png)
 
